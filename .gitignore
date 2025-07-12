@@ -1,0 +1,38 @@
+# ========== Backend (Spring Boot / Maven) ==========
+# IntelliJ IDEA
+back/.idea/
+# Carpetas de compilación
+back/target/
+# Logs y ficheros temporales de Java
+back/**/*.log
+# Eclipse
+back/.classpath
+back/.project
+back/.settings/
+
+# ========== Frontend (Angular / Node) ==========
+# Node modules y dist
+front/node_modules/
+front/dist/
+# Angular build cache
+front/.angular/
+# Angular CLI cache
+front/.angular-cache/
+# Angular local editor settings
+front/.vscode/
+# archivos de compilación de TS
+front/*.js
+front/*.js.map
+front/*.d.ts
+
+# ========== IDEs generales ==========
+# VSCode
+.vscode/
+# JetBrains
+.idea/
+*.iml
+
+# ========== Otros ==========
+# System files
+.DS_Store
+Thumbs.db

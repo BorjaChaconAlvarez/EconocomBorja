@@ -1,0 +1,50 @@
+<div class="login-page">
+  <aside class="left">
+    <img src="assets/images/login.svg" alt="illustration">
+  </aside>
+
+  <section class="right">
+    <img src="assets/images/logos/Logo-RD.svg" alt="realdooh" class="brand">
+    <h2>Inicia sesión en tu cuenta</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" autocomplete="off">
+      <!-- Email -->
+      <mat-form-field appearance="outline">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput name="correo" ngModel>
+      </mat-form-field>
+
+      <!-- Contraseña -->
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput
+               [type]="hide ? 'contraseña' : 'text'"
+               name="contrasenia" ngModel>
+        <button mat-icon-button matSuffix
+                type="button"
+                (click)="hide = !hide">
+          <mat-icon>{{ hide ? 'visibility' : 'visibility_off' }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- Entrar -->
+      <button mat-flat-button class="btn-orange">
+        ENTRAR
+      </button>
+    </form>
+
+    <p class="alt-label">Otras formas de acceso:</p>
+    <button mat-stroked-button class="btn-sso"
+            (click)="ssoSoon()">
+      ENTRAR CON DECATHLON
+    </button>
+
+    <p class="helper">
+      ¿No tienes cuenta?
+      <a href="#">Regístrate</a>
+    </p>
+
+    <img src="assets/images/logos/Econocom.svg"
+         alt="econocom" class="foot-logo">
+  </section>
+</div>
