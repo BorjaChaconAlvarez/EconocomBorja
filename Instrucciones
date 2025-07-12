@@ -1,0 +1,26 @@
+En este github encontrareis 2 carpetas. Una llamada front y otra llamada back. Lo primero que teneis que hacer es descargar el .zip y extraerlo donde mas os guste
+( os recomiendo en una carpeta en el escritorio, por ejemplo PRUEBABORJA y dentro de esa carpeta extraerlo)
+
+Una vez lo tengais extraido y lo tengais localizado entreís en 2  cmd de Windows. ( Tecla windows y escribir cmd y el primer programa)
+
+Dentro del cmd tendreis que ir a esa carpeta, se suele abrir el cmd con el usuario. Si seguisteis mis pasos tendreis que hacer lo siguiente. cd Desktop y cd PruebaBorja.
+
+En una terminal vais a ir a la carpeta back y en la otra terminal vais a ir a la de front. 
+
+VAMOS CON LA PARTE DEL BACK
+
+1-- En la terminal estaremos dentro del back, haremos cd PruebaBorja
+2-- Pondremos mvn spring-boot:run
+
+Os tendria que salir Spring Boot con la version 2.7.18 : https://github.dev/BorjaChaconAlvarez/EconocomBorja/blob/main/Captura%20de%20pantalla%202025-07-12%20214552.png
+
+Y abajo del todo os tendria que salir sin errores : https://github.com/BorjaChaconAlvarez/EconocomBorja/blob/main/SPRINGBOOTCORRECTO.png
+
+Ahora mismo el back esta escuchando 
+
+VAMOS CON LA PARTE FRONT
+
+1-- En la terminal estando eh EconocomBorja vamos a hacer cd front.
+2-- Pondremos ng -serve o : https://github.com/BorjaChaconAlvarez/EconocomBorja/blob/main/ng%20serve%20-o.png
+
+Cuando salga el mensaje de √ Compiled successfully. Se os tendra que abrir la aplicación ya. La parte de la tarea sin la ampliación el usuario seria admin@gmail.com y la contraseña admin. https://github.com/BorjaChaconAlvarez/EconocomBorja/blob/main/LoginCorrecto.png
