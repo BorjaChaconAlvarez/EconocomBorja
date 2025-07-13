@@ -6,6 +6,7 @@ import com.econocom.PruebaBorja.auth.dto.AuthResponse;
 import com.econocom.PruebaBorja.auth.dto.Token;
 import com.econocom.PruebaBorja.auth.service.AuthService;
 import com.econocom.PruebaBorja.config.JwtUtil;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -53,5 +54,19 @@ public class AuthController {
 
         long validez = System.currentTimeMillis() + JwtUtil.getTiempo();
         return ResponseEntity.ok(new AuthResponse(nuevo,validez));
+    }
+    @PostMapping("/registro")
+    public ResponseEntity<?> registro(@RequestBody AuthRequest cuerpo){
+
+    try{
+        servicio.registro(cuerpo);
+        return ResponseEntity.ok("Registro creado correctamente");
+
+    }catch(IllegalArgumentException ex){
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("Ya existe el usuario");
+
+    }catch (Exception ex){
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al registrar");
+    }
     }
 }

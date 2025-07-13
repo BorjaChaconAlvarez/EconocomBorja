@@ -1,0 +1,13 @@
+[ {
+  "correo" : "patatas@hotmail.com",
+  "contrasenia" : "patatas"
+}, {
+  "correo" : "borja@gmail.com",
+  "contrasenia" : "borja123"
+}, {
+  "correo" : "lara@gmail.com",
+  "contrasenia" : "lara123"
+}, {
+  "correo" : "admin@gmail.com",
+  "contrasenia" : "admin"
+} ]

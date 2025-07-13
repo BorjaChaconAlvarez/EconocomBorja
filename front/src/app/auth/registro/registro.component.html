@@ -1,0 +1,70 @@
+<div class="registro-page">
+  <aside class="left">
+    <img src="assets/images/login.svg" alt="illustration">
+  </aside>
+
+  <section class="right">
+    <img src="assets/images/logos/Logo-RD.svg" alt="realdooh" class="brand"> 
+    <h2>Regístrate</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+      <!-- Email -->
+      <mat-form-field appearance="outline">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput formControlName="correo" type="email">
+        <mat-error *ngIf="form.get('correo')?.invalid && form.get('correo')?.touched">
+          <span *ngIf="form.get('correo')?.errors?.['required']">
+            El correo es obligatorio.
+          </span>
+          <span *ngIf="form.get('correo')?.errors?.['email']">
+            Formato inválido.
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Contraseña -->
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput
+               [type]="hide ? 'password' : 'text'"
+               formControlName="contrasenia">
+        <button mat-icon-button matSuffix type="button"
+                (click)="hide = !hide">
+          <mat-icon>
+            {{ hide ? 'visibility' : 'visibility_off' }}
+          </mat-icon>
+        </button>
+        <mat-error *ngIf="form.get('contrasenia')?.invalid && form.get('contrasenia')?.touched">
+          <span *ngIf="form.get('contrasenia')?.errors?.['required']">
+            La contraseña es obligatoria.
+          </span>
+          <span *ngIf="form.get('contrasenia')?.errors?.['minlength']">
+            Mínimo 6 caracteres.
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Botón Registrar -->
+  <button
+  mat-flat-button
+  class="btn-orange"
+  type="submit"
+  [disabled]="form.invalid || loading"
+>
+  Registrar
+</button>
+
+
+      <div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>
+    </form>
+
+
+    <p class="helper">
+      ¿Ya tienes cuenta?
+      <a routerLink="/login">Inicia sesión</a>
+    </p>
+
+
+    <img src="assets/images/logos/Econocom.svg"
+         alt="econocom" class="foot-logo">
+  </section>
+</div>

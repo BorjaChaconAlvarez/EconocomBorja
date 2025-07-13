@@ -22,4 +22,11 @@ export class AuthService {
   actualizar(token:string): Observable<any> {
       return this.http.post(`${this.api}/actualizar`, {token});
   }
+  registro(correo: string, contrasenia:string){
+    return this.http.post(`${this.api}/registro`,{correo: correo , contrasenia : contrasenia},
+      {
+        responseType: 'text'
+      }
+    );
+  } 
 }

@@ -24,7 +24,7 @@ public class JwtUtil {
     private static final Key SIGNING_KEY =
             Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
 
-    private static final long tiempo = 15 * 60 * 1000;   // 15 minutos
+    private static final long tiempo = 2 * 60 * 1000;   // 15 minutos
 
     /** Generar el token */
     public static String generate(String correo) {
