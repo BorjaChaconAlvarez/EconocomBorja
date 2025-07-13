@@ -33,7 +33,7 @@ public class AuthService {
                 });
                 listaUsuarios.forEach(u -> Usuarios.put(u.getCorreo(),u));
             }catch (IOException e){
-                throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "No se pudo guardar el usuario");
+               /** throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "No se pudo guardar el usuario"); Salta error al descomentar esta linea */
 
             }
         }
